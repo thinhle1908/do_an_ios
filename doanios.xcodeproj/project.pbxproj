@@ -13,6 +13,7 @@
 		662B5EE52A160177005CD76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662B5EE42A160177005CD76E /* Assets.xcassets */; };
 		662B5EE82A160177005CD76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662B5EE62A160177005CD76E /* LaunchScreen.storyboard */; };
 		662B5EF32A160177005CD76E /* doaniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B5EF22A160177005CD76E /* doaniosTests.swift */; };
+		667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667978072A16EC4F0032D40F /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		662B5EEE2A160177005CD76E /* doaniosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = doaniosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		662B5EF22A160177005CD76E /* doaniosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doaniosTests.swift; sourceTree = "<group>"; };
 		662B5EF42A160177005CD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		667978072A16EC4F0032D40F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		662B5EDC2A160173005CD76E /* doanios */ = {
 			isa = PBXGroup;
 			children = (
+				667978042A16EAB50032D40F /* New Group */,
 				662B5EDD2A160173005CD76E /* AppDelegate.swift */,
 				662B5EDF2A160173005CD76E /* ViewController.swift */,
 				662B5EE12A160173005CD76E /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				662B5EF42A160177005CD76E /* Info.plist */,
 			);
 			path = doaniosTests;
+			sourceTree = "<group>";
+		};
+		667978042A16EAB50032D40F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				667978072A16EC4F0032D40F /* LoginViewController.swift */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */,
 				662B5EE02A160173005CD76E /* ViewController.swift in Sources */,
 				662B5EDE2A160173005CD76E /* AppDelegate.swift in Sources */,
 			);
