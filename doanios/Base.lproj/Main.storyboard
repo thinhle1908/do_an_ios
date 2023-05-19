@@ -242,5 +242,133 @@ ABC</string>
             </objects>
             <point key="canvasLocation" x="-65.217391304347828" y="97.767857142857139"/>
         </scene>
+        <!--Danh sach ban-->
+        <scene sceneID="qsZ-b5-qkE">
+            <objects>
+                <viewController id="9Nl-2c-SoG" customClass="ViewController" customModule="DoAnManHinhCRUD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jE6-E1-ncn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TqP-J2-CHW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="YR6-ZK-nAt">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YR6-ZK-nAt" id="Z1A-2b-jLP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ban so 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-nZ-RYB">
+                                                    <rect key="frame" x="20" y="11" width="152" height="39.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="guJ-nZ-RYB" secondAttribute="height" multiplier="77:20" id="9ah-r7-UnO"/>
+                                                        <constraint firstAttribute="width" secondItem="guJ-nZ-RYB" secondAttribute="height" multiplier="77:20" id="SYl-G3-eoW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWo-k5-Fv1">
+                                                    <rect key="frame" x="278" y="9" width="53" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button" image="suaban"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xn-gn-0cE">
+                                                    <rect key="frame" x="326" y="8" width="41" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button" image="xoaban"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="guJ-nZ-RYB" firstAttribute="top" secondItem="Z1A-2b-jLP" secondAttribute="top" constant="20" symbolic="YES" id="BzO-m9-yQD"/>
+                                                <constraint firstItem="guJ-nZ-RYB" firstAttribute="leading" secondItem="Z1A-2b-jLP" secondAttribute="leading" constant="20" symbolic="YES" id="IHG-eW-Dlr"/>
+                                                <constraint firstAttribute="bottom" secondItem="guJ-nZ-RYB" secondAttribute="bottom" id="fUO-GK-9S1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MZc-B6-sCn" firstAttribute="trailing" secondItem="TqP-J2-CHW" secondAttribute="trailing" id="K23-vJ-Wqp"/>
+                            <constraint firstItem="TqP-J2-CHW" firstAttribute="leading" secondItem="MZc-B6-sCn" secondAttribute="leading" id="dij-Yd-b5v"/>
+                            <constraint firstItem="MZc-B6-sCn" firstAttribute="bottom" secondItem="TqP-J2-CHW" secondAttribute="bottom" id="rZf-xK-Yx8"/>
+                            <constraint firstItem="TqP-J2-CHW" firstAttribute="top" secondItem="MZc-B6-sCn" secondAttribute="top" id="wCz-Rt-26u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MZc-B6-sCn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Danh sach ban" id="sTO-ka-IEE">
+                        <barButtonItem key="leftBarButtonItem" image="back" id="ndR-Z9-CvS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="on9-c6-qy6"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIR-Wf-Q1v" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3017.3913043478265" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e6T-0O-u0N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eXF-Kg-cYe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yGq-Gk-exR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Nl-2c-SoG" kind="relationship" relationship="rootViewController" id="IKp-Oz-7IK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lzs-LF-vZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108.695652173913" y="97.767857142857139"/>
+        </scene>
+        <!--Menu Chinh-->
+        <scene sceneID="QAO-PX-qtg">
+            <objects>
+                <viewController id="ort-tS-TfL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GXs-6T-9CM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="I1f-Bq-y5d"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu Chinh" id="eC7-aH-d9d">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="Eb4-VI-zF0"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCw-hp-9H7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484.057971014493" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ER7-y6-ARO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mhs-8I-6eq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="50a-hh-oNe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ort-tS-TfL" kind="relationship" relationship="rootViewController" id="Vgj-rf-wsX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAf-K5-q5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573.91304347826087" y="97.767857142857139"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="back" width="25" height="25"/>
+        <image name="menu" width="25" height="25"/>
+        <image name="suaban" width="32" height="32"/>
+        <image name="xoaban" width="50" height="50"/>
+    </resources>
 </document>
