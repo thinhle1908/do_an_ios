@@ -14,6 +14,19 @@
 		662B5EE82A160177005CD76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662B5EE62A160177005CD76E /* LaunchScreen.storyboard */; };
 		662B5EF32A160177005CD76E /* doaniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B5EF22A160177005CD76E /* doaniosTests.swift */; };
 		667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667978072A16EC4F0032D40F /* LoginViewController.swift */; };
+		BA5302842A1E3BA80048125D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BA53027B2A1E3BA70048125D /* FMResultSet.m */; };
+		BA5302852A1E3BA80048125D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BA53027D2A1E3BA70048125D /* FMDatabasePool.m */; };
+		BA5302862A1E3BA80048125D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BA53027E2A1E3BA70048125D /* FMDatabaseQueue.m */; };
+		BA5302872A1E3BA80048125D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5302812A1E3BA80048125D /* FMDatabaseAdditions.m */; };
+		BA5302882A1E3BA80048125D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5302832A1E3BA80048125D /* FMDatabase.m */; };
+		BA53028A2A1E3CAF0048125D /* DatabaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5302892A1E3CAF0048125D /* DatabaseLayer.swift */; };
+		BA53028D2A1E49060048125D /* Oder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53028C2A1E49060048125D /* Oder.swift */; };
+		BA53028F2A1E50120048125D /* table.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53028E2A1E50120048125D /* table.swift */; };
+		BA5302912A1E51DA0048125D /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5302902A1E51DA0048125D /* Bill.swift */; };
+		BA5302932A1E54E00048125D /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5302922A1E54E00048125D /* Dish.swift */; };
+		BA8004492A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */; };
+		BA80044B2A1CF30200BC27E5 /* GoiMonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80044A2A1CF30200BC27E5 /* GoiMonViewController.swift */; };
+		BAC889372A1E2CF00052A0EE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC889362A1E2CF00052A0EE /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +51,26 @@
 		662B5EF22A160177005CD76E /* doaniosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doaniosTests.swift; sourceTree = "<group>"; };
 		662B5EF42A160177005CD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		667978072A16EC4F0032D40F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BA5302782A1E3BA60048125D /* doanios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "doanios-Bridging-Header.h"; sourceTree = "<group>"; };
+		BA5302792A1E3BA70048125D /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		BA53027A2A1E3BA70048125D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		BA53027B2A1E3BA70048125D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		BA53027C2A1E3BA70048125D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		BA53027D2A1E3BA70048125D /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		BA53027E2A1E3BA70048125D /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		BA53027F2A1E3BA70048125D /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		BA5302802A1E3BA80048125D /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		BA5302812A1E3BA80048125D /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		BA5302822A1E3BA80048125D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		BA5302832A1E3BA80048125D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		BA5302892A1E3CAF0048125D /* DatabaseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseLayer.swift; sourceTree = "<group>"; };
+		BA53028C2A1E49060048125D /* Oder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oder.swift; sourceTree = "<group>"; };
+		BA53028E2A1E50120048125D /* table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = table.swift; sourceTree = "<group>"; };
+		BA5302902A1E51DA0048125D /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		BA5302922A1E54E00048125D /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoiMonCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA80044A2A1CF30200BC27E5 /* GoiMonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoiMonViewController.swift; sourceTree = "<group>"; };
+		BAC889362A1E2CF00052A0EE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC889372A1E2CF00052A0EE /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +98,7 @@
 				662B5EDC2A160173005CD76E /* doanios */,
 				662B5EF12A160177005CD76E /* doaniosTests */,
 				662B5EDB2A160173005CD76E /* Products */,
+				BAC889352A1E2CF00052A0EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +114,9 @@
 		662B5EDC2A160173005CD76E /* doanios */ = {
 			isa = PBXGroup;
 			children = (
+				BA53028B2A1E48A30048125D /* DataModel */,
+				BAC889382A1E2D230052A0EE /* FMDB */,
+				BAC889332A1E2C980052A0EE /* DAL */,
 				667978042A16EAB50032D40F /* New Group */,
 				662B5EDD2A160173005CD76E /* AppDelegate.swift */,
 				662B5EDF2A160173005CD76E /* ViewController.swift */,
@@ -103,8 +141,64 @@
 			isa = PBXGroup;
 			children = (
 				667978072A16EC4F0032D40F /* LoginViewController.swift */,
+				BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */,
+				BA80044A2A1CF30200BC27E5 /* GoiMonViewController.swift */,
 			);
 			name = "New Group";
+			sourceTree = "<group>";
+		};
+		BA53028B2A1E48A30048125D /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA53028C2A1E49060048125D /* Oder.swift */,
+				BA53028E2A1E50120048125D /* table.swift */,
+				BA5302902A1E51DA0048125D /* Bill.swift */,
+				BA5302922A1E54E00048125D /* Dish.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		BAC889332A1E2C980052A0EE /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				BA5302892A1E3CAF0048125D /* DatabaseLayer.swift */,
+			);
+			path = DAL;
+			sourceTree = "<group>";
+		};
+		BAC889352A1E2CF00052A0EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAC889362A1E2CF00052A0EE /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAC889382A1E2D230052A0EE /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				BA53027C2A1E3BA70048125D /* FMDatabase.h */,
+				BA5302832A1E3BA80048125D /* FMDatabase.m */,
+				BA5302822A1E3BA80048125D /* FMDatabaseAdditions.h */,
+				BA5302812A1E3BA80048125D /* FMDatabaseAdditions.m */,
+				BA53027F2A1E3BA70048125D /* FMDatabasePool.h */,
+				BA53027D2A1E3BA70048125D /* FMDatabasePool.m */,
+				BA5302792A1E3BA70048125D /* FMDatabaseQueue.h */,
+				BA53027E2A1E3BA70048125D /* FMDatabaseQueue.m */,
+				BA5302802A1E3BA80048125D /* FMDB.h */,
+				BA53027A2A1E3BA70048125D /* FMResultSet.h */,
+				BA53027B2A1E3BA70048125D /* FMResultSet.m */,
+				BAC889392A1E2D2E0052A0EE /* src */,
+				BA5302782A1E3BA60048125D /* doanios-Bridging-Header.h */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		BAC889392A1E2D2E0052A0EE /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +251,7 @@
 				TargetAttributes = {
 					662B5ED92A160173005CD76E = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					662B5EED2A160177005CD76E = {
 						CreatedOnToolsVersion = 10.3;
@@ -208,7 +303,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5302842A1E3BA80048125D /* FMResultSet.m in Sources */,
+				BA5302862A1E3BA80048125D /* FMDatabaseQueue.m in Sources */,
 				667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */,
+				BA53028D2A1E49060048125D /* Oder.swift in Sources */,
+				BA5302912A1E51DA0048125D /* Bill.swift in Sources */,
+				BA53028A2A1E3CAF0048125D /* DatabaseLayer.swift in Sources */,
+				BA5302932A1E54E00048125D /* Dish.swift in Sources */,
+				BA5302882A1E3BA80048125D /* FMDatabase.m in Sources */,
+				BA80044B2A1CF30200BC27E5 /* GoiMonViewController.swift in Sources */,
+				BA53028F2A1E50120048125D /* table.swift in Sources */,
+				BA8004492A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift in Sources */,
+				BA5302872A1E3BA80048125D /* FMDatabaseAdditions.m in Sources */,
+				BA5302852A1E3BA80048125D /* FMDatabasePool.m in Sources */,
 				662B5EE02A160173005CD76E /* ViewController.swift in Sources */,
 				662B5EDE2A160173005CD76E /* AppDelegate.swift in Sources */,
 			);
@@ -372,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = doanios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -380,6 +488,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tdc.edu.vn.doanios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "doanios/FMDB/doanios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -389,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = doanios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -397,6 +508,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tdc.edu.vn.doanios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "doanios/FMDB/doanios-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

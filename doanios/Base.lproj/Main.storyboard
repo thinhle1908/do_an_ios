@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q8v-P7-AI7">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -245,7 +245,7 @@ ABC</string>
         <!--Danh sach ban-->
         <scene sceneID="qsZ-b5-qkE">
             <objects>
-                <viewController id="9Nl-2c-SoG" customClass="ViewController" customModule="DoAnManHinhCRUD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9Nl-2c-SoG" customClass="ViewController" customModule="doanios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jE6-E1-ncn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,7 +308,96 @@ ABC</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIR-Wf-Q1v" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3017.3913043478265" y="97.767857142857139"/>
+            <point key="canvasLocation" x="3006" y="98"/>
+        </scene>
+        <!--Man hinh goi mon-->
+        <scene sceneID="0OU-Aq-HVz">
+            <objects>
+                <viewController title="Man hinh goi mon" id="Q8v-P7-AI7" customClass="GoiMonViewController" customModule="doanios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B7i-RF-Xco">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-w2-TNl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.99970108270000002" green="0.57636755699999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="14" id="oIv-3O-A92">
+                                    <size key="itemSize" width="190" height="220"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="goiMonCell" id="T35-u2-uII" customClass="GoiMonCollectionViewCell" customModule="doanios" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="190" height="220"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htj-5H-vMm">
+                                                    <rect key="frame" x="8" y="9" width="173" height="110"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O66-YU-3dF">
+                                                    <rect key="frame" x="59" y="178" width="73" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE6-fT-O8O">
+                                                    <rect key="frame" x="151" y="178" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="ic_tangmon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rac-X5-1HK">
+                                                    <rect key="frame" x="9" y="178" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="ic_giammon"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8B-n2-pq5">
+                                                    <rect key="frame" x="51" y="123" width="89" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Tên món ăn">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="0.072387332528156434" blue="0.0" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="imgMonAn" destination="htj-5H-vMm" id="Ly1-pd-kZq"/>
+                                            <outlet property="tenMonAn" destination="l8B-n2-pq5" id="L1E-Sd-p4h"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99970108270000002" green="0.57636755699999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nxO-w2-TNl" firstAttribute="width" secondItem="B7i-RF-Xco" secondAttribute="width" id="BYf-OL-i2M"/>
+                            <constraint firstItem="nxO-w2-TNl" firstAttribute="height" secondItem="B7i-RF-Xco" secondAttribute="height" id="Zo7-oh-s0g"/>
+                            <constraint firstItem="nxO-w2-TNl" firstAttribute="centerY" secondItem="vaB-ML-s80" secondAttribute="centerY" id="d2I-PR-Bom"/>
+                            <constraint firstItem="nxO-w2-TNl" firstAttribute="centerX" secondItem="vaB-ML-s80" secondAttribute="centerX" id="eQO-2Y-bRF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vaB-ML-s80"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gọi món" id="aee-cY-Yg4"/>
+                    <connections>
+                        <outlet property="coll" destination="nxO-w2-TNl" id="3d2-oX-655"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zu1-oM-pqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3992.753623188406" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e6T-0O-u0N">
@@ -367,6 +456,8 @@ ABC</string>
     </scenes>
     <resources>
         <image name="back" width="25" height="25"/>
+        <image name="ic_giammon" width="20" height="20"/>
+        <image name="ic_tangmon" width="20" height="20"/>
         <image name="menu" width="25" height="25"/>
         <image name="suaban" width="32" height="32"/>
         <image name="xoaban" width="50" height="50"/>
