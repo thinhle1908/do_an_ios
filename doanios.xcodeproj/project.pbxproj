@@ -14,6 +14,8 @@
 		662B5EE82A160177005CD76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662B5EE62A160177005CD76E /* LaunchScreen.storyboard */; };
 		662B5EF32A160177005CD76E /* doaniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B5EF22A160177005CD76E /* doaniosTests.swift */; };
 		667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667978072A16EC4F0032D40F /* LoginViewController.swift */; };
+		74D7B80E2A208B1B00981D9A /* BanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7B80D2A208B1B00981D9A /* BanViewController.swift */; };
+		74D7B8102A208D2C00981D9A /* BanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7B80F2A208D2C00981D9A /* BanCollectionViewCell.swift */; };
 		BA5302842A1E3BA80048125D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BA53027B2A1E3BA70048125D /* FMResultSet.m */; };
 		BA5302852A1E3BA80048125D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BA53027D2A1E3BA70048125D /* FMDatabasePool.m */; };
 		BA5302862A1E3BA80048125D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BA53027E2A1E3BA70048125D /* FMDatabaseQueue.m */; };
@@ -51,6 +53,8 @@
 		662B5EF22A160177005CD76E /* doaniosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doaniosTests.swift; sourceTree = "<group>"; };
 		662B5EF42A160177005CD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		667978072A16EC4F0032D40F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		74D7B80D2A208B1B00981D9A /* BanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanViewController.swift; sourceTree = "<group>"; };
+		74D7B80F2A208D2C00981D9A /* BanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA5302782A1E3BA60048125D /* doanios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "doanios-Bridging-Header.h"; sourceTree = "<group>"; };
 		BA5302792A1E3BA70048125D /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
 		BA53027A2A1E3BA70048125D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				667978072A16EC4F0032D40F /* LoginViewController.swift */,
 				BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */,
 				BA80044A2A1CF30200BC27E5 /* GoiMonViewController.swift */,
+				74D7B80D2A208B1B00981D9A /* BanViewController.swift */,
+				74D7B80F2A208D2C00981D9A /* BanCollectionViewCell.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			files = (
 				BA5302842A1E3BA80048125D /* FMResultSet.m in Sources */,
 				BA5302862A1E3BA80048125D /* FMDatabaseQueue.m in Sources */,
+				74D7B80E2A208B1B00981D9A /* BanViewController.swift in Sources */,
 				667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */,
 				BA53028D2A1E49060048125D /* Oder.swift in Sources */,
 				BA5302912A1E51DA0048125D /* Bill.swift in Sources */,
@@ -318,6 +325,7 @@
 				BA5302852A1E3BA80048125D /* FMDatabasePool.m in Sources */,
 				662B5EE02A160173005CD76E /* ViewController.swift in Sources */,
 				662B5EDE2A160173005CD76E /* AppDelegate.swift in Sources */,
+				74D7B8102A208D2C00981D9A /* BanCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
