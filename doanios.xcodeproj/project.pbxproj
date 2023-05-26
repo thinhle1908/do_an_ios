@@ -23,7 +23,7 @@
 		BA5302882A1E3BA80048125D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5302832A1E3BA80048125D /* FMDatabase.m */; };
 		BA53028A2A1E3CAF0048125D /* DatabaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5302892A1E3CAF0048125D /* DatabaseLayer.swift */; };
 		BA53028D2A1E49060048125D /* Oder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53028C2A1E49060048125D /* Oder.swift */; };
-		BA53028F2A1E50120048125D /* table.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53028E2A1E50120048125D /* table.swift */; };
+		BA53028F2A1E50120048125D /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53028E2A1E50120048125D /* Table.swift */; };
 		BA5302912A1E51DA0048125D /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5302902A1E51DA0048125D /* Bill.swift */; };
 		BA5302932A1E54E00048125D /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5302922A1E54E00048125D /* Dish.swift */; };
 		BA8004492A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */; };
@@ -69,7 +69,7 @@
 		BA5302832A1E3BA80048125D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		BA5302892A1E3CAF0048125D /* DatabaseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseLayer.swift; sourceTree = "<group>"; };
 		BA53028C2A1E49060048125D /* Oder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oder.swift; sourceTree = "<group>"; };
-		BA53028E2A1E50120048125D /* table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = table.swift; sourceTree = "<group>"; };
+		BA53028E2A1E50120048125D /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 		BA5302902A1E51DA0048125D /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		BA5302922A1E54E00048125D /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoiMonCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				BA53028C2A1E49060048125D /* Oder.swift */,
-				BA53028E2A1E50120048125D /* table.swift */,
+				BA53028E2A1E50120048125D /* Table.swift */,
 				BA5302902A1E51DA0048125D /* Bill.swift */,
 				BA5302922A1E54E00048125D /* Dish.swift */,
 			);
@@ -319,7 +319,7 @@
 				BA5302932A1E54E00048125D /* Dish.swift in Sources */,
 				BA5302882A1E3BA80048125D /* FMDatabase.m in Sources */,
 				BA80044B2A1CF30200BC27E5 /* GoiMonViewController.swift in Sources */,
-				BA53028F2A1E50120048125D /* table.swift in Sources */,
+				BA53028F2A1E50120048125D /* Table.swift in Sources */,
 				BA8004492A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift in Sources */,
 				BA5302872A1E3BA80048125D /* FMDatabaseAdditions.m in Sources */,
 				BA5302852A1E3BA80048125D /* FMDatabasePool.m in Sources */,
