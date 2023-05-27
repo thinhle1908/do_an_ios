@@ -10,10 +10,22 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    @IBOutlet weak var tf_nhapmapin: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Chinh text filed nhap ma pin
 
         // Do any additional setup after loading the view.
+    }
+    func underLineTextField() {
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: -15, y: 30, width: 200, height: 1.0)
+
+        bottomLine.backgroundColor = UIColor.black.cgColor
+        tf_nhapmapin.layer.addSublayer(bottomLine)
+
     }
     
 
