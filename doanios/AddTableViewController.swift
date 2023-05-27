@@ -10,7 +10,7 @@ import UIKit
 
 class AddTableViewController: UIViewController {
     private var dao:DatabaseLayer?
-    var table: Table?
+    var tableData: Table?
     @IBOutlet weak var txtBan: UITextField!
     var headerTitle = ""
     @IBOutlet weak var btnBan: UIButton!
@@ -19,27 +19,25 @@ class AddTableViewController: UIViewController {
         super.viewDidLoad()
         if (headerTitle != "") {
             self.title = headerTitle
-            txtBan.text = table?.getName()
+            txtBan.text = tableData?.getName()
         }
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btnTable(_ sender: Any) {
+    @IBAction func btnThemban(_ sender: Any) {
         if (headerTitle != "") {
-            let table = Table(name: txtBan.text!)
+            let table = Table(id: tableData!.id, name: txtBan.text!)
             dao = DatabaseLayer()
-            let _ = dao!.updateTable(_table: table!)
+            let _ = dao!.updateTable(_table: table!, tenBan: txtBan.text!)
         }
         else {
-            let table = Table(name: txtBan.text!)
+            let table = Table(id: "", name: txtBan.text!)
             dao = DatabaseLayer()
             let _ = dao!.insertTable(table: table!)
             
         }
-        
-        
-        
     }
+    
     
     /*
     // MARK: - Navigation

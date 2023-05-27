@@ -9,9 +9,11 @@ import UIKit
 import Foundation
 
 class Table {
+    var id:String
     private var name:String
     
-    init?(name:String){
+    init?(id:String, name:String){
+        self.id = id
         self.name = name
     }
     
@@ -22,6 +24,8 @@ class Table {
     public func setName(_ newValue: String) {
         name = newValue
     }
-    
+    public func getID() -> String {
+        return id
+    }
     
 }

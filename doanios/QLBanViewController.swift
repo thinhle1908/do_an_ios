@@ -53,16 +53,16 @@ class QLBanViewController: UIViewController, UITableViewDelegate, UITableViewDat
     */
     @objc func onclickEdit(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AddTableViewController") as! AddTableViewController
-        vc.table = tableList[sender.tag]
+        vc.tableData = tableList[sender.tag]
         vc.headerTitle = "Update"
         navigationController?.pushViewController(vc, animated: true)
     }
     @objc func onclickDelete(_ sender: UIButton) {
-        
         dao = DatabaseLayer()
         let _ = dao!.deleteTable(_table: tableList[sender.tag])
         tableList.remove(at: sender.tag)
         collban.reloadData()
+        
     }
 
 }
