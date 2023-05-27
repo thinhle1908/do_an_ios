@@ -31,7 +31,12 @@ class QLBanViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let table = tableList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "QLBanTableViewCell") as! QLBanTableViewCell
+       
         cell.txtBan.text = table.getName()
+        cell.btnSua.tag = indexPath.row
+        cell.btnXoa.tag = indexPath.row
+        cell.btnSua.addTarget(self, action: #selector(onclickEdit(_:)), for: .touchUpInside)
+        cell.btnXoa.addTarget(self, action: #selector(onclickDelete(_:)), for: .touchUpInside)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -46,22 +51,18 @@ class QLBanViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Pass the selected object to the new view controller.
     }
     */
+    @objc func onclickEdit(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddTableViewController") as! AddTableViewController
+        vc.table = tableList[sender.tag]
+        vc.headerTitle = "Update"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @objc func onclickDelete(_ sender: UIButton) {
+        
+        dao = DatabaseLayer()
+        let _ = dao!.deleteTable(_table: tableList[sender.tag])
+        tableList.remove(at: sender.tag)
+        collban.reloadData()
+    }
 
 }
-//extension ViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 5
-//    }
-
-//     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "QLBanTableViewCell", for: indexPath) as? QLBanTableViewController
-//
-//         return cell
-//
-//
-//    }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 120
-//    }
-
-//}

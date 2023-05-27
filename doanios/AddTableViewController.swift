@@ -10,19 +10,34 @@ import UIKit
 
 class AddTableViewController: UIViewController {
     private var dao:DatabaseLayer?
+    var table: Table?
     @IBOutlet weak var txtBan: UITextField!
-    
+    var headerTitle = ""
     @IBOutlet weak var btnBan: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if (headerTitle != "") {
+            self.title = headerTitle
+            txtBan.text = table?.getName()
+        }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func btnTable(_ sender: Any) {
-        let table = Table(name: txtBan.text!)
-        dao = DatabaseLayer()
-        let _ = dao!.insertTable(table: table!)
+        if (headerTitle != "") {
+            let table = Table(name: txtBan.text!)
+            dao = DatabaseLayer()
+            let _ = dao!.updateTable(_table: table!)
+        }
+        else {
+            let table = Table(name: txtBan.text!)
+            dao = DatabaseLayer()
+            let _ = dao!.insertTable(table: table!)
+            
+        }
+        
+        
         
     }
     
