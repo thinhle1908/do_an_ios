@@ -13,17 +13,19 @@ class BanViewController: UIViewController,
     UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout {
     var  mysideMenu = false
-    
+    private var tableList = [Table]()
+    private var dao:DatabaseLayer?
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
     
     let data = ["Ban 1","Ban 2","Ban 3","Ban 4","Ban 5","Ban 6",]
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return tableList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let table = tableList[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "goiBanCell", for: indexPath) as! BanCollectionViewCell
-        cell.tenBan.text = data[indexPath.row]
+        cell.tenBan.text = table.getName()
         cell.layer.cornerRadius = 10
         return cell;
     }
@@ -42,6 +44,8 @@ UICollectionViewDelegateFlowLayout {
         super.viewDidLoad()
         coll.dataSource = self;
         coll.delegate = self;
+        dao = DatabaseLayer()
+        dao?.getAllTable(_tables: &tableList)
         // Do any additional setup after loading the view.
     }
     
