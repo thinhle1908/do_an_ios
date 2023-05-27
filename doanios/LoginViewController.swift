@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Chinh text filed nhap ma pin
+        underLineTextField()
 
         // Do any additional setup after loading the view.
     }
