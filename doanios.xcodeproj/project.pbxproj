@@ -14,6 +14,7 @@
 		662B5EE82A160177005CD76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662B5EE62A160177005CD76E /* LaunchScreen.storyboard */; };
 		662B5EF32A160177005CD76E /* doaniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B5EF22A160177005CD76E /* doaniosTests.swift */; };
 		667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667978072A16EC4F0032D40F /* LoginViewController.swift */; };
+		BA0927A02A22011F003FE7FA /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA09279F2A22011F003FE7FA /* DishViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		662B5EF22A160177005CD76E /* doaniosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doaniosTests.swift; sourceTree = "<group>"; };
 		662B5EF42A160177005CD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		667978072A16EC4F0032D40F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BA09279F2A22011F003FE7FA /* DishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		662B5EDC2A160173005CD76E /* doanios */ = {
 			isa = PBXGroup;
 			children = (
+				BA09279F2A22011F003FE7FA /* DishViewController.swift */,
 				667978042A16EAB50032D40F /* New Group */,
 				662B5EDD2A160173005CD76E /* AppDelegate.swift */,
 				662B5EDF2A160173005CD76E /* ViewController.swift */,
@@ -210,6 +213,7 @@
 			files = (
 				667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */,
 				662B5EE02A160173005CD76E /* ViewController.swift in Sources */,
+				BA0927A02A22011F003FE7FA /* DishViewController.swift in Sources */,
 				662B5EDE2A160173005CD76E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
