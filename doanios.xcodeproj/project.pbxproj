@@ -13,6 +13,7 @@
 		662B5EE52A160177005CD76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662B5EE42A160177005CD76E /* Assets.xcassets */; };
 		662B5EE82A160177005CD76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662B5EE62A160177005CD76E /* LaunchScreen.storyboard */; };
 		662B5EF32A160177005CD76E /* doaniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B5EF22A160177005CD76E /* doaniosTests.swift */; };
+		66638C1F2A2221A400EFAAB1 /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66638C1E2A2221A400EFAAB1 /* DishViewController.swift */; };
 		667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667978072A16EC4F0032D40F /* LoginViewController.swift */; };
 		74532A2A2A20E9A200E5AFAE /* QLBanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74532A292A20E9A200E5AFAE /* QLBanViewController.swift */; };
 		74532A2C2A20E9FF00E5AFAE /* QLBanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74532A2B2A20E9FF00E5AFAE /* QLBanTableViewCell.swift */; };
@@ -56,6 +57,7 @@
 		662B5EEE2A160177005CD76E /* doaniosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = doaniosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		662B5EF22A160177005CD76E /* doaniosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doaniosTests.swift; sourceTree = "<group>"; };
 		662B5EF42A160177005CD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66638C1E2A2221A400EFAAB1 /* DishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
 		667978072A16EC4F0032D40F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		74532A292A20E9A200E5AFAE /* QLBanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLBanViewController.swift; sourceTree = "<group>"; };
 		74532A2B2A20E9FF00E5AFAE /* QLBanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLBanTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				74532A2B2A20E9FF00E5AFAE /* QLBanTableViewCell.swift */,
 				7454ECB62A218AA300308683 /* QLBanTableViewController.swift */,
 				7454ECB82A219B5100308683 /* AddTableViewController.swift */,
+				66638C1E2A2221A400EFAAB1 /* DishViewController.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				74532A2C2A20E9FF00E5AFAE /* QLBanTableViewCell.swift in Sources */,
 				BA5302872A1E3BA80048125D /* FMDatabaseAdditions.m in Sources */,
 				BA5302852A1E3BA80048125D /* FMDatabasePool.m in Sources */,
+				66638C1F2A2221A400EFAAB1 /* DishViewController.swift in Sources */,
 				662B5EE02A160173005CD76E /* ViewController.swift in Sources */,
 				662B5EDE2A160173005CD76E /* AppDelegate.swift in Sources */,
 				74D7B8102A208D2C00981D9A /* BanCollectionViewCell.swift in Sources */,
