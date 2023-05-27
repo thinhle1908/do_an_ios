@@ -11,6 +11,12 @@ import UIKit
 class GoiMonCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imgMonAn: UIImageView!
+    @IBAction func btnGiamSoLuong(_ sender: UIButton) {
+    }
     
+    @IBAction func btnTangSoLuong(_ sender: UIButton) {
+    }
     @IBOutlet weak var tenMonAn: UILabel!
+    @IBOutlet weak var soLuongMon: UITextField!
+    @IBOutlet weak var giaMonAn: UILabel!
 }

@@ -522,11 +522,17 @@ ABC</string>
                                                     <rect key="frame" x="151" y="178" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="ic_tangmon"/>
+                                                    <connections>
+                                                        <action selector="btnTangSoLuong:" destination="T35-u2-uII" eventType="touchUpInside" id="dr2-aQ-1KD"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rac-X5-1HK">
                                                     <rect key="frame" x="9" y="178" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="ic_giammon"/>
+                                                    <connections>
+                                                        <action selector="btnGiamSoLuong:" destination="T35-u2-uII" eventType="touchUpInside" id="JKZ-KV-8g3"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8B-n2-pq5">
                                                     <rect key="frame" x="51" y="123" width="89" height="21"/>
@@ -542,11 +548,27 @@ ABC</string>
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qy-RA-kDZ">
+                                                    <rect key="frame" x="63" y="153" width="64" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Giá món">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="0.072387332528156434" blue="0.0" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="giaMonAn" destination="9Qy-RA-kDZ" id="t2N-zh-9tI"/>
                                             <outlet property="imgMonAn" destination="htj-5H-vMm" id="Ly1-pd-kZq"/>
+                                            <outlet property="soLuongMon" destination="O66-YU-3dF" id="hNt-cl-0dI"/>
                                             <outlet property="tenMonAn" destination="l8B-n2-pq5" id="L1E-Sd-p4h"/>
                                         </connections>
                                     </collectionViewCell>

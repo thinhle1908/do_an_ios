@@ -13,6 +13,16 @@ class GoiMonViewController: UIViewController,
     UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout{
 
+    
+    
+    
+    private var orderList = [Order]()
+    private var dao:DatabaseLayer?
+    
+    var order1:Order? = Order(name: "Com ga 1",table: "2", state: "chuaThanhToan", quantity: 3, price: 1000)
+    var order2:Order? = Order(name: "Com ga 2",table: "2", state: "chuaThanhToan", quantity: 3, price: 1000)
+    
+    
     //GET DATA
     let data = ["Com ga 1","Com ga 2","Com ga 3","Com ga 4","Com ga 5","Com ga 6",]
     
@@ -24,6 +34,8 @@ class GoiMonViewController: UIViewController,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "goiMonCell", for: indexPath) as! GoiMonCollectionViewCell
         cell.tenMonAn.text = data[indexPath.row]
+        cell.imgMonAn.image = #imageLiteral(resourceName: "imgComGa")
+        cell.soLuongMon.text = 
         return cell;
     }
     
@@ -44,6 +56,9 @@ class GoiMonViewController: UIViewController,
         coll.dataSource = self;
         coll.delegate = self;
         // Do any additional setup after loading the view.
+        orderList.append(order1!)
+        orderList.append(order2!)
+        
     }
     
 
