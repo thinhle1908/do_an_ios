@@ -458,6 +458,9 @@ ABC</string>
                                         <state key="normal" title="ADD">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnThemban:" destination="hvK-6J-M1P" eventType="touchUpInside" id="Qca-am-1up"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
