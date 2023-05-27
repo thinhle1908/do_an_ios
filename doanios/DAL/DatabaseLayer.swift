@@ -36,7 +36,7 @@ class DatabaseLayer{
     private let DISH_PRICE = "value"
     private let DISH_IMAGE = "image"
     //3. Table
-    private let TABLE_TABLE_NAME = "table"
+    private let TABLE_TABLE_NAME = "ban"
     private let TABLE_ID = "_id"
     private let TABLE_NAME = "tableName"
     //4. Bill
@@ -97,7 +97,7 @@ class DatabaseLayer{
     private func createTable()-> Bool{
         var ok = false;
         let sql1 = "CREATE TABLE \(ORDER_TABLE_NAME)("
-            + ORDER_ID + " INTEGER PRIMARY KEY AUTO INCREAMENT, "
+            + ORDER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + ORDER_NAME + " TEXT, "
             + ORDER_PRICE + " INTEGER, "
             + ORDER_STATE + " TEXT, "
@@ -105,17 +105,17 @@ class DatabaseLayer{
             + ORDER_TABLE + " TEXT)"
         
         let sql2 = "CREATE TABLE \(DISH_TABLE_NAME)("
-            + DISH_ID + " INTEGER PRIMARY KEY AUTO INCREAMENT, "
+            + DISH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + DISH_NAME + " TEXT, "
             + DISH_PRICE  + " INTEGER, "
             + DISH_IMAGE + " TEXT)"
         
         let sql3 = "CREATE TABLE \(TABLE_TABLE_NAME)("
-            + TABLE_ID + " INTEGER PRIMARY KEY AUTO INCREAMENT, "
+            + TABLE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + TABLE_NAME + " TEXT)"
         
         let sql4 = "CREATE TABLE \(BILL_TABLE_NAME)("
-            + BILL_ID + " INTEGER PRIMARY KEY AUTO INCREAMENT, "
+            + BILL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + BILL_DETAIL + " TEXT, "
             + BILL_TOTAL + " INTEGER, "
             + BILL_DATE + " TEXT)"

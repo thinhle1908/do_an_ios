@@ -20,7 +20,9 @@ class AddTableViewController: UIViewController {
     }
     
     @IBAction func btnTable(_ sender: Any) {
-        print("Quang bam ban")
+        let table = Table(name: txtBan.text!)
+        dao = DatabaseLayer()
+        let _ = dao!.insertTable(table: table!)
         
     }
     

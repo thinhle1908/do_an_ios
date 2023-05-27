@@ -12,22 +12,26 @@ class QLBanViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
 
-    
+    private var tableList = [Table]()
+    private var dao:DatabaseLayer?
     
     @IBOutlet weak var collban: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         collban.delegate = self
         collban.dataSource = self
+        dao = DatabaseLayer()
+        dao?.getAllTable(_tables: &tableList)
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return tableList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let table = tableList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "QLBanTableViewCell") as! QLBanTableViewCell
-        cell.txtBan.text = "Quang"
+        cell.txtBan.text = table.getName()
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
