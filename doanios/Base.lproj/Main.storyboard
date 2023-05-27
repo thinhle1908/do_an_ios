@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qu5-PY-xIj">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -242,5 +242,184 @@ ABC</string>
             </objects>
             <point key="canvasLocation" x="-65.217391304347828" y="97.767857142857139"/>
         </scene>
+        <!--Thêm Món-->
+        <scene sceneID="hyw-nN-e23">
+            <objects>
+                <viewController id="IWF-7K-vjr" customClass="DishViewController" customModule="doanios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1H2-tf-zxU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="cUj-3h-2Fn">
+                                <rect key="frame" x="20" y="100" width="374" height="619"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="Hd2-oR-W2N">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Hd2-oR-W2N" secondAttribute="height" multiplier="1:1" id="p0D-5f-jLq"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="pjg-tm-mtb" appends="YES" id="oCn-xx-5pH"/>
+                                        </connections>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhap ten mon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bY-aA-bhc">
+                                        <rect key="frame" x="0.0" y="431" width="374" height="22"/>
+                                        <color key="backgroundColor" red="1" green="0.70788757840000005" blue="0.20631518460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhap gia tien" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Oc-wM-cYi">
+                                        <rect key="frame" x="0.0" y="510" width="374" height="22"/>
+                                        <color key="backgroundColor" red="1" green="0.70788757840000005" blue="0.20631518460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Y7-UF-vbd">
+                                        <rect key="frame" x="0.0" y="589" width="374" height="30"/>
+                                        <color key="backgroundColor" red="0.3742953497872914" green="1" blue="0.17783703702684461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Them mon">
+                                            <color key="titleColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addDish:" destination="IWF-7K-vjr" eventType="touchUpInside" id="rRy-qx-UHL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.70788757840000005" blue="0.20631518460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cUj-3h-2Fn" secondAttribute="trailing" constant="20" id="1OW-gP-N6k"/>
+                            <constraint firstItem="cUj-3h-2Fn" firstAttribute="leading" secondItem="DHa-EV-JmA" secondAttribute="leading" constant="20" id="O8G-RX-pLa"/>
+                            <constraint firstItem="cUj-3h-2Fn" firstAttribute="top" secondItem="1H2-tf-zxU" secondAttribute="top" constant="100" id="bld-fk-szI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DHa-EV-JmA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Thêm Món" id="gnw-im-SQ7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="1Lg-w6-O8v">
+                            <connections>
+                                <action selector="back:" destination="IWF-7K-vjr" id="35S-9H-Zhw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dishImage" destination="Hd2-oR-W2N" id="6fV-DG-b7V"/>
+                        <outlet property="txtDishName" destination="3bY-aA-bhc" id="aSR-LG-H0a"/>
+                        <outlet property="txtPrice" destination="2Oc-wM-cYi" id="FqJ-Ax-Y8Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dl5-sV-K4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pjg-tm-mtb">
+                    <connections>
+                        <action selector="pickUpImage:" destination="IWF-7K-vjr" id="ocS-Ei-Ln1"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1767" y="98"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="C7p-e2-XbX">
+            <objects>
+                <tableViewController id="nii-ix-aWg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rYg-j9-Y0G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="0.70788757840000005" blue="0.20631518460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="16" rowHeight="100" id="Uau-wZ-83X">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uau-wZ-83X" id="Prf-7U-LNR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AnhMau" translatesAutoresizingMaskIntoConstraints="NO" id="BZt-nW-kYf">
+                                            <rect key="frame" x="0.0" y="0.0" width="183" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxs-mZ-p9j">
+                                            <rect key="frame" x="191" y="11" width="84" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">Tên món	</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Giá tiền" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqF-uq-6MI">
+                                            <rect key="frame" x="191" y="40" width="58" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Danh mục" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRn-pZ-QkY">
+                                            <rect key="frame" x="191" y="69" width="78" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.70788757840000005" blue="0.20631518460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nii-ix-aWg" id="ief-d3-bks"/>
+                            <outlet property="delegate" destination="nii-ix-aWg" id="AcG-b0-gWt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="DKP-RG-A9S"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1g-Rc-IyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3494.202898550725" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LkP-Zj-zu2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OQA-Bv-k40" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qky-zE-LJO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nii-ix-aWg" kind="relationship" relationship="rootViewController" id="lHF-3D-ctZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9mF-9M-k5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2584.057971014493" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y98-lB-eVD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qu5-PY-xIj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r7j-is-4qn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IWF-7K-vjr" kind="relationship" relationship="rootViewController" id="J6a-kX-WN2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S7u-bE-TuT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831.88405797101461" y="97.767857142857139"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="AnhMau" width="640" height="360"/>
+        <image name="default" width="360" height="360"/>
+    </resources>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66136DF22A1F41E10001EDDA /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66136DF12A1F41E10001EDDA /* DishViewController.swift */; };
 		662B5EDE2A160173005CD76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B5EDD2A160173005CD76E /* AppDelegate.swift */; };
 		662B5EE02A160173005CD76E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B5EDF2A160173005CD76E /* ViewController.swift */; };
 		662B5EE32A160173005CD76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662B5EE12A160173005CD76E /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66136DF12A1F41E10001EDDA /* DishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
 		662B5EDA2A160173005CD76E /* doanios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doanios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662B5EDD2A160173005CD76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		662B5EDF2A160173005CD76E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66136DEE2A1F392F0001EDDA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				667978072A16EC4F0032D40F /* LoginViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		662B5ED12A160173005CD76E = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +89,9 @@
 		662B5EDC2A160173005CD76E /* doanios */ = {
 			isa = PBXGroup;
 			children = (
-				667978042A16EAB50032D40F /* New Group */,
+				66136DEE2A1F392F0001EDDA /* Controller */,
 				662B5EDD2A160173005CD76E /* AppDelegate.swift */,
+				66136DF12A1F41E10001EDDA /* DishViewController.swift */,
 				662B5EDF2A160173005CD76E /* ViewController.swift */,
 				662B5EE12A160173005CD76E /* Main.storyboard */,
 				662B5EE42A160177005CD76E /* Assets.xcassets */,
@@ -97,14 +108,6 @@
 				662B5EF42A160177005CD76E /* Info.plist */,
 			);
 			path = doaniosTests;
-			sourceTree = "<group>";
-		};
-		667978042A16EAB50032D40F /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				667978072A16EC4F0032D40F /* LoginViewController.swift */,
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +213,7 @@
 			files = (
 				667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */,
 				662B5EE02A160173005CD76E /* ViewController.swift in Sources */,
+				66136DF22A1F41E10001EDDA /* DishViewController.swift in Sources */,
 				662B5EDE2A160173005CD76E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
