@@ -14,6 +14,10 @@
 		662B5EE82A160177005CD76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662B5EE62A160177005CD76E /* LaunchScreen.storyboard */; };
 		662B5EF32A160177005CD76E /* doaniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B5EF22A160177005CD76E /* doaniosTests.swift */; };
 		667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667978072A16EC4F0032D40F /* LoginViewController.swift */; };
+		74532A2A2A20E9A200E5AFAE /* QLBanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74532A292A20E9A200E5AFAE /* QLBanViewController.swift */; };
+		74532A2C2A20E9FF00E5AFAE /* QLBanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74532A2B2A20E9FF00E5AFAE /* QLBanTableViewCell.swift */; };
+		7454ECB72A218AA300308683 /* QLBanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7454ECB62A218AA300308683 /* QLBanTableViewController.swift */; };
+		7454ECB92A219B5100308683 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7454ECB82A219B5100308683 /* AddTableViewController.swift */; };
 		74D7B80E2A208B1B00981D9A /* BanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7B80D2A208B1B00981D9A /* BanViewController.swift */; };
 		74D7B8102A208D2C00981D9A /* BanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7B80F2A208D2C00981D9A /* BanCollectionViewCell.swift */; };
 		BA5302842A1E3BA80048125D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BA53027B2A1E3BA70048125D /* FMResultSet.m */; };
@@ -53,6 +57,10 @@
 		662B5EF22A160177005CD76E /* doaniosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doaniosTests.swift; sourceTree = "<group>"; };
 		662B5EF42A160177005CD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		667978072A16EC4F0032D40F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		74532A292A20E9A200E5AFAE /* QLBanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLBanViewController.swift; sourceTree = "<group>"; };
+		74532A2B2A20E9FF00E5AFAE /* QLBanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLBanTableViewCell.swift; sourceTree = "<group>"; };
+		7454ECB62A218AA300308683 /* QLBanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLBanTableViewController.swift; sourceTree = "<group>"; };
+		7454ECB82A219B5100308683 /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 		74D7B80D2A208B1B00981D9A /* BanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanViewController.swift; sourceTree = "<group>"; };
 		74D7B80F2A208D2C00981D9A /* BanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA5302782A1E3BA60048125D /* doanios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "doanios-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -149,6 +157,10 @@
 				BA80044A2A1CF30200BC27E5 /* GoiMonViewController.swift */,
 				74D7B80D2A208B1B00981D9A /* BanViewController.swift */,
 				74D7B80F2A208D2C00981D9A /* BanCollectionViewCell.swift */,
+				74532A292A20E9A200E5AFAE /* QLBanViewController.swift */,
+				74532A2B2A20E9FF00E5AFAE /* QLBanTableViewCell.swift */,
+				7454ECB62A218AA300308683 /* QLBanTableViewController.swift */,
+				7454ECB82A219B5100308683 /* AddTableViewController.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -310,17 +322,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA5302842A1E3BA80048125D /* FMResultSet.m in Sources */,
+				74532A2A2A20E9A200E5AFAE /* QLBanViewController.swift in Sources */,
 				BA5302862A1E3BA80048125D /* FMDatabaseQueue.m in Sources */,
 				74D7B80E2A208B1B00981D9A /* BanViewController.swift in Sources */,
 				667978082A16EC4F0032D40F /* LoginViewController.swift in Sources */,
 				BA53028D2A1E49060048125D /* Oder.swift in Sources */,
 				BA5302912A1E51DA0048125D /* Bill.swift in Sources */,
 				BA53028A2A1E3CAF0048125D /* DatabaseLayer.swift in Sources */,
+				7454ECB92A219B5100308683 /* AddTableViewController.swift in Sources */,
 				BA5302932A1E54E00048125D /* Dish.swift in Sources */,
 				BA5302882A1E3BA80048125D /* FMDatabase.m in Sources */,
+				7454ECB72A218AA300308683 /* QLBanTableViewController.swift in Sources */,
 				BA80044B2A1CF30200BC27E5 /* GoiMonViewController.swift in Sources */,
 				BA53028F2A1E50120048125D /* Table.swift in Sources */,
 				BA8004492A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift in Sources */,
+				74532A2C2A20E9FF00E5AFAE /* QLBanTableViewCell.swift in Sources */,
 				BA5302872A1E3BA80048125D /* FMDatabaseAdditions.m in Sources */,
 				BA5302852A1E3BA80048125D /* FMDatabasePool.m in Sources */,
 				662B5EE02A160173005CD76E /* ViewController.swift in Sources */,

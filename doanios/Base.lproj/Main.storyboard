@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uIM-G7-PRC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eXF-Kg-cYe">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -338,7 +338,7 @@ ABC</string>
         <!--Danh sach ban-->
         <scene sceneID="qsZ-b5-qkE">
             <objects>
-                <viewController id="9Nl-2c-SoG" customClass="ViewController" customModule="doanios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QLBanViewController" id="9Nl-2c-SoG" customClass="QLBanViewController" customModule="doanios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jE6-E1-ncn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,10 +347,10 @@ ABC</string>
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="YR6-ZK-nAt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QLBanTableViewCell" rowHeight="60" id="YR6-ZK-nAt" customClass="QLBanTableViewCell" customModule="doanios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YR6-ZK-nAt" id="Z1A-2b-jLP">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YR6-ZK-nAt" id="Z1A-2b-jLP" customClass="QLBanTableViewCell" customModule="doanios" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -358,38 +358,48 @@ ABC</string>
                                                     <rect key="frame" x="41" y="7" width="333" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SBh-tM-PnQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="45"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="159" translatesAutoresizingMaskIntoConstraints="NO" id="CPi-6q-FHX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="333" height="45"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ban so 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-nZ-RYB">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SBh-tM-PnQ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="45"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CvS-3O-bSB">
-                                                            <rect key="frame" x="223" y="0.0" width="110" height="45"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWo-k5-Fv1">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="45"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="55" id="geR-ed-Nyh"/>
-                                                                        <constraint firstAttribute="height" constant="45" id="wgH-Bp-qx2"/>
-                                                                    </constraints>
-                                                                    <state key="normal" title="Button" image="suaban"/>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xn-gn-0cE">
-                                                                    <rect key="frame" x="55" y="0.0" width="55" height="45"/>
-                                                                    <state key="normal" title="Button" image="xoaban"/>
-                                                                </button>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ban so 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-nZ-RYB">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="45"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CvS-3O-bSB">
+                                                                    <rect key="frame" x="223" y="0.0" width="110" height="45"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWo-k5-Fv1">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="45"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="55" id="geR-ed-Nyh"/>
+                                                                                <constraint firstAttribute="height" constant="45" id="wgH-Bp-qx2"/>
+                                                                            </constraints>
+                                                                            <state key="normal" title="Button" image="suaban"/>
+                                                                        </button>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xn-gn-0cE">
+                                                                            <rect key="frame" x="55" y="0.0" width="55" height="45"/>
+                                                                            <state key="normal" title="Button" image="xoaban"/>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnSua" destination="HWo-k5-Fv1" id="dYe-aJ-iug"/>
+                                            <outlet property="btnXoa" destination="1Xn-gn-0cE" id="XEV-rG-PI6"/>
+                                            <outlet property="txtBan" destination="guJ-nZ-RYB" id="KMf-dh-p6U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -404,13 +414,73 @@ ABC</string>
                         <viewLayoutGuide key="safeArea" id="MZc-B6-sCn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Danh sach ban" id="sTO-ka-IEE">
+                        <barButtonItem key="backBarButtonItem" title=" " id="MMA-hs-2oj"/>
                         <barButtonItem key="leftBarButtonItem" image="back" id="ndR-Z9-CvS"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="on9-c6-qy6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="on9-c6-qy6">
+                            <connections>
+                                <segue destination="hvK-6J-M1P" kind="show" id="w5w-lC-d7k"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collban" destination="TqP-J2-CHW" id="TBw-94-K4U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIR-Wf-Q1v" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3915.9420289855075" y="97.767857142857139"/>
+            <point key="canvasLocation" x="2833" y="98"/>
+        </scene>
+        <!--Them Ban-->
+        <scene sceneID="bMp-Pc-103">
+            <objects>
+                <viewController storyboardIdentifier="AddTableViewController" title="Them Ban" id="hvK-6J-M1P" customClass="AddTableViewController" customModule="doanios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P71-gF-pja">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="rFJ-4V-kFu">
+                                <rect key="frame" x="30" y="168" width="354" height="153"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhap ten ban" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3h-Oo-bhL">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="bFx-yX-L6g"/>
+                                            <constraint firstAttribute="width" constant="354" id="gpc-EY-rd7"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bv-nJ-TSk">
+                                        <rect key="frame" x="0.0" y="98" width="354" height="55"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <state key="normal" title="ADD">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnTable:" destination="hvK-6J-M1P" eventType="touchUpInside" id="9Od-qo-XPi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rFJ-4V-kFu" firstAttribute="leading" secondItem="xR9-6g-VeM" secondAttribute="leading" constant="30" id="XUV-Mi-Q3Q"/>
+                            <constraint firstItem="rFJ-4V-kFu" firstAttribute="top" secondItem="xR9-6g-VeM" secondAttribute="top" constant="80" id="crZ-sY-K7p"/>
+                            <constraint firstItem="xR9-6g-VeM" firstAttribute="trailing" secondItem="rFJ-4V-kFu" secondAttribute="trailing" constant="30" id="onR-Q5-r9v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xR9-6g-VeM"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnBan" destination="9bv-nJ-TSk" id="Uyt-8s-5Ws"/>
+                        <outlet property="txtBan" destination="C3h-Oo-bhL" id="94o-96-emt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HL9-Hl-xns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3672" y="100"/>
         </scene>
         <!--Man hinh goi mon-->
         <scene sceneID="0OU-Aq-HVz">
@@ -517,7 +587,7 @@ ABC</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lzs-LF-vZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3017.3913043478265" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1961" y="98"/>
         </scene>
         <!--Menu Chinh-->
         <scene sceneID="QAO-PX-qtg">
@@ -600,7 +670,7 @@ ABC</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCw-hp-9H7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2394.202898550725" y="97.767857142857139"/>
+            <point key="canvasLocation" x="2422" y="-918"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ER7-y6-ARO">
@@ -618,7 +688,7 @@ ABC</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAf-K5-q5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628.985507246377" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1645" y="-918"/>
         </scene>
         <!--Tam Tinh Controller-->
         <scene sceneID="IWk-4x-o4T">

@@ -397,7 +397,26 @@ class DatabaseLayer{
     //****************************
     // Mark: CRUD CHO BANG TABLE
     //****************************
-    
+    public func insertTable(table:Table)->Bool {
+        var ok = false
+        //Cau lenh sql de insert du lieu vao database
+        let sql = "INSERT INTO \(TABLE_TABLE_NAME) ("
+            + TABLE_NAME + ")"
+            + " VALUES (?)"
+        //Thuc hien ca lenh SQL
+        if open() {
+            if database!.executeUpdate(sql, withArgumentsIn: [table.getName()]) {
+                ok = true
+                os_log("Them ban thanh cong")
+                let _ = close()
+            }
+        }
+        else {
+            os_log("Khong ghi duoc du lieu")
+        }
+        return ok
+        
+    }
     public func getAllTable(_tables: inout [Table]){
         //thuc hien doc du lieu
         if (open()){
