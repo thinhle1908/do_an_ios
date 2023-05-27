@@ -447,27 +447,27 @@ class DatabaseLayer{
     
     public func deleteTable(_table: Table){
         if open(){
-             let sql = "DELETE FROM \(TABLE_TABLE_NAME) WHERE \(TABLE_NAME) = \(_table.getName())"
+             let sql = "DELETE FROM \(TABLE_TABLE_NAME) WHERE \(TABLE_NAME) = ? "
             do {
                 // Thực hiện câu lệnh SQL
-                try database?.executeUpdate(sql, values: nil)
+                try database?.executeUpdate(sql, withArgumentsIn: [_table.getName()])
             } catch {
                 print("Error when trying to delete order: \(error.localizedDescription)")
             }
         }
         let _ = close()
     }
-    func updateTable(_table:Table, newName:String) {
+    func updateTable(_table:Table) {
         // Mở kết nối với cơ sở dữ liệu
         if open() {
             // Lặp qua mảng các đối tượng Order
             
-                let sql = "UPDATE \(TABLE_TABLE_NAME) SET \(TABLE_NAME) = \(newName) WHERE \(TABLE_NAME) = \(_table.getName())"
+                let sql = "UPDATE \(TABLE_TABLE_NAME) SET \(TABLE_NAME) = ? WHERE \(TABLE_NAME) = ?"
                 
                 // Xử lý ngoại lệ
                 do {
                     // Thực hiện câu lệnh SQL
-                    try database?.executeUpdate(sql, values: nil)
+                    try database?.executeUpdate(sql, withArgumentsIn: [_table.getName(), _table.getName()])
                 } catch {
                     print("Error when trying to update order: \(error.localizedDescription)")
                 }
