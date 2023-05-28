@@ -15,6 +15,8 @@ class DishTableViewCell: UITableViewCell {
     @IBOutlet weak var dishPrice: UILabel!
     @IBOutlet weak var dishImage: UIImageView!
     
+    @IBOutlet weak var trashImage: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

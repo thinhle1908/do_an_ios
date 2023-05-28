@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aza-bR-yoe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GCu-NS-b0U">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -999,7 +999,7 @@ ABC</string>
                                         <color key="backgroundColor" red="1" green="0.70788757840000005" blue="0.20631518460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3b-Lk-9oq">
                                         <rect key="frame" x="0.0" y="589" width="374" height="30"/>
@@ -1009,6 +1009,7 @@ ABC</string>
                                         </state>
                                         <connections>
                                             <action selector="addDish:" destination="Aza-bR-yoe" eventType="touchUpInside" id="ubc-0L-R1r"/>
+                                            <segue destination="NRQ-8o-Lea" kind="unwind" unwindAction="unWindToDanhSachMonWithSegue:" id="sMQ-21-FL5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1023,28 +1024,30 @@ ABC</string>
                         <viewLayoutGuide key="safeArea" id="UHx-6d-dpu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Thêm Món" id="NGk-ya-THh">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="dBU-ti-LJn">
+                        <barButtonItem key="leftBarButtonItem" title="⬅︎" id="OPx-p2-IcJ">
                             <connections>
-                                <action selector="back:" destination="Aza-bR-yoe" id="Bqo-yS-0Cq"/>
+                                <action selector="btnBack:" destination="Aza-bR-yoe" id="5se-oc-378"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnThemMon" destination="W3b-Lk-9oq" id="DYU-fN-X3I"/>
                         <outlet property="dishImage" destination="uF7-iS-GRd" id="lEj-f7-PZ7"/>
                         <outlet property="txtDishName" destination="RSZ-O1-Pba" id="otP-XG-WQK"/>
                         <outlet property="txtPrice" destination="sp8-hv-Byu" id="YeQ-Dq-qds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBw-j2-hVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NRQ-8o-Lea" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="9wb-J0-zhq">
                     <connections>
                         <action selector="pickUpImage:" destination="Aza-bR-yoe" id="zSD-vV-Mga"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1354" y="806"/>
+            <point key="canvasLocation" x="4903" y="1108"/>
         </scene>
-        <!--Dish Table View Controller-->
+        <!--Danh sach mon an-->
         <scene sceneID="czR-SJ-4Bx">
             <objects>
                 <tableViewController id="uIg-1v-vHG" customClass="DishTableViewController" customModule="doanios" customModuleProvider="target" sceneMemberID="viewController">
@@ -1078,12 +1081,19 @@ ABC</string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM0-wV-RtJ">
+                                            <rect key="frame" x="339" y="47" width="55" height="45"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="xoaban"/>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dishImage" destination="oV6-wn-XEL" id="VhF-nx-j7l"/>
                                     <outlet property="dishName" destination="aRE-8X-gCL" id="kHk-yy-LH1"/>
                                     <outlet property="dishPrice" destination="vyy-uD-uK1" id="Y0U-at-RjS"/>
+                                    <outlet property="trashImage" destination="KM0-wV-RtJ" id="hqb-1z-Rai"/>
+                                    <segue destination="Aza-bR-yoe" kind="show" identifier="editDishSegue" id="EI0-rp-gzV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1092,10 +1102,56 @@ ABC</string>
                             <outlet property="delegate" destination="uIg-1v-vHG" id="UCs-XX-gTX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Danh sach mon an" id="Zsg-1i-uTq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0ti-4o-IGB">
+                            <connections>
+                                <segue destination="E5U-XC-Hza" kind="presentation" identifier="addNewDishSegue" id="b65-Zc-v1c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tbList" destination="4rE-jK-M48" id="QPt-4v-chi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J07-as-7uH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392.753623188406" y="805.58035714285711"/>
+            <point key="canvasLocation" x="3319" y="1108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fHf-uw-wza">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GCu-NS-b0U" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RQj-6F-i6J">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uIg-1v-vHG" kind="relationship" relationship="rootViewController" id="5T2-Hv-ryc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHf-pQ-Hqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275" y="1108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EAz-Bx-Rve">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E5U-XC-Hza" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DgW-33-a4r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Aza-bR-yoe" kind="relationship" relationship="rootViewController" id="r2a-rD-R2W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auD-hD-itZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4130" y="751"/>
         </scene>
     </scenes>
     <resources>
@@ -1108,4 +1164,7 @@ ABC</string>
         <image name="suaban" width="32" height="32"/>
         <image name="xoaban" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EI0-rp-gzV"/>
+    </inferredMetricsTieBreakers>
 </document>
