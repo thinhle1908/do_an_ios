@@ -11,12 +11,20 @@ import UIKit
 class DishViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //Properties
-    
+    var dish: Dish?
     @IBOutlet weak var dishImage: UIImageView!
     
     @IBOutlet weak var txtDishName: UITextField!
     
     @IBOutlet weak var txtPrice: UITextField!
+    
+    @IBOutlet weak var btnThemMon: UIButton!
+    //dinh nghia bien enum cho duong di cua man hinh
+    enum navigationType {
+        case adddish
+        case editdish
+    }
+    var navigationtype:navigationType = .adddish
     
     
     override func viewDidLoad() {
@@ -26,8 +34,20 @@ class DishViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         underLineTextField(tf: txtPrice)
         
         txtDishName.delegate = self
+        btnThemMon.setTitle("them mon", for: .normal)
         
         // Do any additional setup after loading the view.
+        //Lay du lieu tu dish neu co
+        if let dish  = dish{
+            navigationItem.title = dish.getName()
+            txtDishName.text = dish.getName()
+            //dua anh cua mon an vao imgview
+            txtPrice.text = String(dish.getPrice())
+            //dua ratingvalue vao ratingcontroll
+            dishImage.image = dish.getImage()
+            btnThemMon.setTitle("sua mon", for: .normal)
+        }
+        updateSavestate()
     }
     
     
@@ -54,10 +74,6 @@ class DishViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         //An man hinh hien tai, quay ve ,am hinh truoc do
         dismiss(animated: true, completion: nil)
     }
-    @IBAction func back(_ sender: Any) {
-        print("Tro ve")
-        
-    }
     
     @IBAction func addDish(_ sender: Any) {
         print("Da them mon")
@@ -71,7 +87,9 @@ class DishViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         return true
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("Name of the Food is \(txtDishName.text)")
+        //print("Name of the Food is \(txtDishName.text)")
+        navigationItem.title = txtDishName.text
+        updateSavestate()
     }
     //Ham them gachs duoi
     func underLineTextField(tf:UITextField!) {
@@ -82,14 +100,45 @@ class DishViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         tf.layer.addSublayer(bottomLine)
         
     }
-    /*
+    
+    @IBAction func btnBack(_ sender: Any) {
+        switch  navigationtype {
+        case .adddish:
+            dismiss(animated: true, completion: nil)
+        case .editdish:
+            if let navigtionController = navigationController{
+                navigationController?.popViewController(animated: true)
+            }
+        }
+    }
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Kiem tra nut them mon duoc nhan hay chua
+        if let button = sender as? UIButton, button === btnThemMon{
+            let name = txtDishName.text ?? ""
+            let price = txtPrice.text ?? ""
+            let image = dishImage.image
+            dish = Dish(name: name, price: Int(price)!, image: image)
+        }
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
      }
-     */
+    private func updateSavestate(){
+        let name = txtDishName.text ?? ""
+        let price = txtPrice.text ?? ""
+        let image = dishImage.image
+     
+        if(!name.isEmpty && !price.isEmpty && image != nil){
+            btnThemMon.backgroundColor = UIColor.green
+            btnThemMon.isEnabled = true
+        }
+        else{
+            btnThemMon.backgroundColor = UIColor.gray
+            btnThemMon.isEnabled = false
+        }
+    }
     
 }
