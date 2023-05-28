@@ -578,7 +578,7 @@ class DatabaseLayer{
         let newImageData: NSData = newDish.getImage()!.pngData()! as NSData
         let newStringImage = newImageData.base64EncodedString(options:.lineLength64Characters)
         if open() {
-            let sql = "UPDATE FROM \(DISH_TABLE_NAME) SET \(DISH_NAME) = ?, \(DISH_PRICE) = ?, \(DISH_IMAGE) = ? WHERE \(DISH_NAME) = ? AND \(DISH_PRICE) = ?  "
+            let sql = "UPDATE \(DISH_TABLE_NAME) SET \(DISH_NAME) = ?, \(DISH_PRICE) = ?, \(DISH_IMAGE) = ? WHERE \(DISH_NAME) = ? AND \(DISH_PRICE) = ?  "
             if database!.executeUpdate(sql, withArgumentsIn: [newDish.getName(),newDish.getPrice(),newStringImage,oldDish.getName(),oldDish.getPrice()]) {
                 ok = true
                 os_log("Sua mon an thanh cong")

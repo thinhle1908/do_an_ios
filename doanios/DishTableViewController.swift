@@ -11,20 +11,27 @@ import UIKit
 class DishTableViewController: UITableViewController {
     
     //MARK: Properties
+    private var dao:DatabaseLayer?
     
     @IBOutlet var tbList: UITableView!
     var dishes = [Dish]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Khoi tao cho dao
+        dao = DatabaseLayer()
+        
+        //doc du lieu vao database meallist
+        dao?.getAllDish(dishes: &dishes)
+        
         //Create an example of meal
-        let image = UIImage(named: "AnhMau")
-        if let dish = Dish(name: "Ga nuong", price: 5, image: image){
-            dishes += [dish]
-        }
-        if let dish = Dish(name: "Trai cay", price: 5, image: image){
-            dishes += [dish]
-        }
+//        let image = UIImage(named: "AnhMau")
+//        if let dish = Dish(name: "Ga nuong", price: 5, image: image){
+//            dishes += [dish]
+//        }
+//        if let dish = Dish(name: "Trai cay", price: 5, image: image){
+//            dishes += [dish]
+//        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -69,6 +76,7 @@ class DishTableViewController: UITableViewController {
         guard let indexPath = tbList.indexPathForRow(at: point)else{
             return
         }
+        dao!.deleteDish(dish: dishes[indexPath.row])
         dishes.remove(at: indexPath.row)
         tbList.deleteRows(at: [indexPath], with: .left )
     }
@@ -124,16 +132,23 @@ class DishTableViewController: UITableViewController {
                 
                 switch source.navigationtype{
                 case .adddish:
+                    //ghi vao co so du lieu
+                    let _ = dao!.insertDish(dish: dish)
+                    
                     //them mon an moi vao table view cua meal list
                     print("adddish")
                     let newindexpath = IndexPath(row: dishes.count, section: 0)
                     dishes.append(dish)
                     tableView.insertRows(at: [newindexpath], with: .none)
                 case .editdish:
-                    //lay vi tri cell duoc ch0n truoc do
+                    //lay vi tri cell duoc chon truoc do
                     if let selectedIndexpath = tableView.indexPathForSelectedRow {
+                        dao!.edit(oldDish: dishes[selectedIndexpath.row], newDish: dish)
+
                         //cap nhat meal moi vao
                         dishes[selectedIndexpath.row] = dish
+                        
+                        
                         //reload cell tai vi tri selectedIndexpath
                         tableView.reloadRows(at: [selectedIndexpath], with: .none)
                     }
