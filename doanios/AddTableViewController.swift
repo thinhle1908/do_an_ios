@@ -22,7 +22,6 @@ class AddTableViewController: UIViewController {
             txtBan.text = tableData?.getName()
         }
         oldName = txtBan.text
-        updateSavestate()
         // Do any additional setup after loading the view.
     }
     
@@ -45,13 +44,15 @@ class AddTableViewController: UIViewController {
         let name = txtBan.text ?? ""
         
         if(!name.isEmpty){
-            btnBan.backgroundColor = UIColor.green
             btnBan.isEnabled = true
         }
         else{
-            btnBan.backgroundColor = UIColor.gray
             btnBan.isEnabled = false
         }
+    }
+    
+    @IBAction func btnBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

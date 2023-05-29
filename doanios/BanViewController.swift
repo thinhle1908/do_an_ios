@@ -46,6 +46,7 @@ UICollectionViewDelegateFlowLayout {
         coll.delegate = self;
         dao = DatabaseLayer()
         dao?.getAllTable(_tables: &tableList)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -77,7 +78,17 @@ UICollectionViewDelegateFlowLayout {
         }
         mysideMenu = !mysideMenu
     }
-    
+    @IBAction func unwindToGoiMenu(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+        coll.delegate = self
+        coll.dataSource = self
+        tableList.removeAll()
+        dao = DatabaseLayer()
+        dao?.getAllTable(_tables: &tableList)
+        coll.reloadData()
+        print("Quang bam unwind")
+    }
     
 
 }
