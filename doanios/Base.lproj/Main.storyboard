@@ -406,6 +406,10 @@ ABC</string>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9Nl-2c-SoG" id="EDa-MG-fWX"/>
+                                    <outlet property="delegate" destination="9Nl-2c-SoG" id="u4V-66-EZ4"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -419,9 +423,10 @@ ABC</string>
                     </view>
                     <navigationItem key="navigationItem" title="Danh sach ban" id="sTO-ka-IEE">
                         <barButtonItem key="backBarButtonItem" title=" " id="MMA-hs-2oj"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="back" id="SOa-ex-GjA"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="on9-c6-qy6">
                             <connections>
-                                <segue destination="hvK-6J-M1P" kind="show" id="w5w-lC-d7k"/>
+                                <segue destination="K1T-wP-NfY" kind="show" id="w5w-lC-d7k"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -463,7 +468,7 @@ ABC</string>
                                         </state>
                                         <connections>
                                             <action selector="btnThemban:" destination="hvK-6J-M1P" eventType="touchUpInside" id="Qca-am-1up"/>
-                                            <segue destination="9Nl-2c-SoG" kind="show" id="HQt-BK-5Pw"/>
+                                            <segue destination="IPX-4S-WIY" kind="unwind" unwindAction="unwindToThemBan:" id="40c-WM-jN0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -477,14 +482,22 @@ ABC</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xR9-6g-VeM"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qB8-9M-OGf">
+                        <barButtonItem key="leftBarButtonItem" image="back" id="dkB-ux-hOZ">
+                            <connections>
+                                <action selector="btnBack:" destination="hvK-6J-M1P" id="bic-TS-5CG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnBan" destination="9bv-nJ-TSk" id="Uyt-8s-5Ws"/>
                         <outlet property="txtBan" destination="C3h-Oo-bhL" id="94o-96-emt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HL9-Hl-xns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IPX-4S-WIY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3672" y="100"/>
+            <point key="canvasLocation" x="4581.159420289855" y="99.776785714285708"/>
         </scene>
         <!--Man hinh goi mon-->
         <scene sceneID="0OU-Aq-HVz">
@@ -747,7 +760,7 @@ ABC</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkU-Ke-Pqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5800" y="97.767857142857139"/>
+            <point key="canvasLocation" x="6708.6956521739139" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wVB-S9-ZNO">
@@ -763,7 +776,7 @@ ABC</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6L-pa-e1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6505.7971014492759" y="99.776785714285708"/>
+            <point key="canvasLocation" x="7415.9420289855079" y="99.776785714285708"/>
         </scene>
         <!--Ket Qua Thanh Toan-->
         <scene sceneID="yjp-wN-WAl">
@@ -827,7 +840,7 @@ ABC</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rR0-zQ-KiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7195.652173913044" y="97.767857142857139"/>
+            <point key="canvasLocation" x="8105.7971014492759" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3eG-fB-gSv">
@@ -1034,9 +1047,28 @@ ABC</string>
             </objects>
             <point key="canvasLocation" x="4130" y="751"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X2k-Jj-jmz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K1T-wP-NfY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l2I-Ip-9S9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hvK-6J-M1P" kind="relationship" relationship="rootViewController" id="OeO-B6-88U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svJ-tW-Y0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3671.0144927536235" y="99.776785714285708"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AnhMau" width="640" height="360"/>
+        <image name="back" width="25" height="25"/>
         <image name="default" width="100" height="100"/>
         <image name="ic_giammon" width="20" height="20"/>
         <image name="ic_tangmon" width="20" height="20"/>
@@ -1046,6 +1078,6 @@ ABC</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EI0-rp-gzV"/>
-        <segue reference="IKp-Oz-7IK"/>
+        <segue reference="LB8-oT-kFN"/>
     </inferredMetricsTieBreakers>
 </document>

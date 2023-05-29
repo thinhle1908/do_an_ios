@@ -17,12 +17,20 @@ class QLBanViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var collban: UITableView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+       
         collban.delegate = self
         collban.dataSource = self
+        
         dao = DatabaseLayer()
         dao?.getAllTable(_tables: &tableList)
+        
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
+       
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableList.count
@@ -62,6 +70,22 @@ class QLBanViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let _ = dao!.deleteTable(_table: tableList[sender.tag])
         tableList.remove(at: sender.tag)
         collban.reloadData()
+        
+    }
+    
+    @IBAction func unwindToThemBan(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+        
+        
+        collban.delegate = self
+        collban.dataSource = self
+        tableList.removeAll()
+        dao = DatabaseLayer()
+        dao?.getAllTable(_tables: &tableList)
+        collban.reloadData()
+       print("Quang bam unwind")
+        
         
     }
 

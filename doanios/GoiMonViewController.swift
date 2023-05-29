@@ -43,6 +43,7 @@ class GoiMonViewController: UIViewController,
         super.viewDidLoad()
         coll.dataSource = self;
         coll.delegate = self;
+        coll.reloadData()
         // Do any additional setup after loading the view.
     }
     
