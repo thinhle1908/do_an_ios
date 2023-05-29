@@ -457,18 +457,18 @@ class DatabaseLayer{
         }
         let _ = close()
     }
-    func updateTable(_table:Table, tenBan:String) {
+    func updateTable(oldName: String, _table:Table) {
         // Mở kết nối với cơ sở dữ liệu
         if open() {
             // Lặp qua mảng các đối tượng Order
             
-                let sql = "UPDATE FROM \(TABLE_TABLE_NAME) SET \(TABLE_NAME) = \(tenBan) WHERE \(TABLE_ID) = ?"
+                let sql = "UPDATE \(TABLE_TABLE_NAME) SET \(TABLE_NAME) = ? WHERE \(TABLE_NAME) = ?"
                 
                 // Xử lý ngoại lệ
                 do {
                     // Thực hiện câu lệnh SQL
-                    try database?.executeUpdate(sql, withArgumentsIn: [tenBan, _table.getID()])
-                    print(_table.getID());
+                    try database?.executeUpdate(sql, withArgumentsIn: [_table.getName(),oldName])
+                
                     os_log("Sua thanh cong")
                 } catch {
                     print("Error when trying to update order: \(error.localizedDescription)")
