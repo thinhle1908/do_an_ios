@@ -14,21 +14,23 @@ class AddTableViewController: UIViewController {
     @IBOutlet weak var txtBan: UITextField!
     var headerTitle = ""
     @IBOutlet weak var btnBan: UIButton!
-    
+    var oldName:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         if (headerTitle != "") {
             self.title = headerTitle
             txtBan.text = tableData?.getName()
         }
+        oldName = txtBan.text
         // Do any additional setup after loading the view.
     }
     
     @IBAction func btnThemban(_ sender: Any) {
         if (headerTitle != "") {
+            print("Quang \(oldName)")
             let table = Table(id: tableData!.id, name: txtBan.text!)
             dao = DatabaseLayer()
-            let _ = dao!.updateTable(_table: table!, tenBan: txtBan.text!)
+            let _ = dao!.updateTable(oldName: oldName!, _table: table!)
         }
         else {
             let table = Table(id: "", name: txtBan.text!)
