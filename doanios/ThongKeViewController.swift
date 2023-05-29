@@ -20,8 +20,16 @@ class ThongKeViewController: UIViewController {
     private var orderCount:Int = 0
     private var tableCount:Int = 0
     private var dishCount:Int = 0
+    private var moneyCount:Int = 0
     
-    public func get4Kindata(){
+    
+    @IBOutlet weak var lbSoHangBan: UILabel!
+    @IBOutlet weak var lbSoDonHang: UILabel!
+    @IBOutlet weak var lbTongTienThu: UILabel!
+    @IBOutlet weak var lbSoBan: UILabel!
+    @IBOutlet weak var lbTongSoMonAn: UILabel!
+    
+    public func get4KindData(){
         
         dao?.getAllOrder(_orders: &orderList)
         dao?.getAllDish(dishes: &dishList)
@@ -35,24 +43,33 @@ class ThongKeViewController: UIViewController {
        orderCount = orderList.count
         tableCount = tableList.count
         dishCount = dishList.count
-        
+        billCount = billList.count
         for bill in billList{
-            billCount += bill.getTotal()
+            moneyCount += bill.getTotal()
         }
+        print("Count order: ",orderCount)
+        print("Count table: ",tableCount)
+        print("Count dish: ",dishCount)
+        print("Count bill: ",billCount)
+        print("Count money: ",moneyCount)
     }
     
     public func setValueToLabel(){
-        /*
-        lblTotalOrder.text = String(orderCount)
-        lblTotalDish.text = String(orderCount)
-        lblTotalTable.text = String(orderCount)
-        lblTotalBill.text = String(orderCount)
-        */
+        
+        lbSoHangBan.text = String(orderCount)
+        lbSoBan.text = String(tableCount)
+        lbSoDonHang.text = String(billCount)
+        lbTongSoMonAn.text = String(dishCount)
+        lbTongTienThu.text = String(moneyCount)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dao = DatabaseLayer()
+        get4KindData()
+        count()
+        setValueToLabel()
         // Do any additional setup after loading the view.
     }
     

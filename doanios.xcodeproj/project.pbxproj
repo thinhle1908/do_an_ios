@@ -38,6 +38,11 @@
 		BAC889372A1E2CF00052A0EE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC889362A1E2CF00052A0EE /* libsqlite3.0.tbd */; };
 		BAFFE2032A24940F003E25D7 /* ThongKeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE2022A24940E003E25D7 /* ThongKeViewController.swift */; };
 		BAFFE2052A24B466003E25D7 /* do_an_ios in Resources */ = {isa = PBXBuildFile; fileRef = BAFFE2042A24B466003E25D7 /* do_an_ios */; };
+		BAFFE2192A25091A003E25D7 /* ThanhToanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE2142A250918003E25D7 /* ThanhToanController.swift */; };
+		BAFFE21A2A25091A003E25D7 /* TamTinhController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE2152A250918003E25D7 /* TamTinhController.swift */; };
+		BAFFE21B2A25091A003E25D7 /* TamTinhTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE2162A250919003E25D7 /* TamTinhTableViewCell.swift */; };
+		BAFFE21C2A25091A003E25D7 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE2172A250919003E25D7 /* BillTableViewCell.swift */; };
+		BAFFE21D2A25091A003E25D7 /* BillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE2182A250919003E25D7 /* BillTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,11 @@
 		BAC889362A1E2CF00052A0EE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		BAFFE2022A24940E003E25D7 /* ThongKeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThongKeViewController.swift; sourceTree = "<group>"; };
 		BAFFE2042A24B466003E25D7 /* do_an_ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = do_an_ios; sourceTree = "<group>"; };
+		BAFFE2142A250918003E25D7 /* ThanhToanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanhToanController.swift; sourceTree = "<group>"; };
+		BAFFE2152A250918003E25D7 /* TamTinhController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TamTinhController.swift; sourceTree = "<group>"; };
+		BAFFE2162A250919003E25D7 /* TamTinhTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TamTinhTableViewCell.swift; sourceTree = "<group>"; };
+		BAFFE2172A250919003E25D7 /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		BAFFE2182A250919003E25D7 /* BillTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +182,11 @@
 		667978042A16EAB50032D40F /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				BAFFE2172A250919003E25D7 /* BillTableViewCell.swift */,
+				BAFFE2182A250919003E25D7 /* BillTableViewController.swift */,
+				BAFFE2152A250918003E25D7 /* TamTinhController.swift */,
+				BAFFE2162A250919003E25D7 /* TamTinhTableViewCell.swift */,
+				BAFFE2142A250918003E25D7 /* ThanhToanController.swift */,
 				BAFFE2022A24940E003E25D7 /* ThongKeViewController.swift */,
 				667978072A16EC4F0032D40F /* LoginViewController.swift */,
 				BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */,
@@ -362,13 +377,18 @@
 				BA53028F2A1E50120048125D /* Table.swift in Sources */,
 				66638C322A2262E800EFAAB1 /* DishTableViewController.swift in Sources */,
 				BAFFE2032A24940F003E25D7 /* ThongKeViewController.swift in Sources */,
+				BAFFE2192A25091A003E25D7 /* ThanhToanController.swift in Sources */,
 				BA8004492A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift in Sources */,
 				74532A2C2A20E9FF00E5AFAE /* QLBanTableViewCell.swift in Sources */,
 				BA5302872A1E3BA80048125D /* FMDatabaseAdditions.m in Sources */,
+				BAFFE21B2A25091A003E25D7 /* TamTinhTableViewCell.swift in Sources */,
 				BA5302852A1E3BA80048125D /* FMDatabasePool.m in Sources */,
 				66638C1F2A2221A400EFAAB1 /* DishViewController.swift in Sources */,
 				662B5EE02A160173005CD76E /* ViewController.swift in Sources */,
+				BAFFE21A2A25091A003E25D7 /* TamTinhController.swift in Sources */,
 				662B5EDE2A160173005CD76E /* AppDelegate.swift in Sources */,
+				BAFFE21C2A25091A003E25D7 /* BillTableViewCell.swift in Sources */,
+				BAFFE21D2A25091A003E25D7 /* BillTableViewController.swift in Sources */,
 				74D7B8102A208D2C00981D9A /* BanCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -198,11 +198,11 @@ class DatabaseLayer{
     }
     
     //Lay cac don hang chua thanh toan (dang doi tinh tien)
-    public func getOrderByTable(_orders:inout[Order],_tableName:String){
+    public func getOrderByTable(_orders:inout[Order], _tableName: String){
         
         //thuc hien doc du lieu
         if (open()){
-            let sql = "SELECT * FROM \(ORDER_TABLE_NAME) WHERE \(ORDER_TABLE) = \(_tableName) AND \(ORDER_STATE) = `chuathanhtoan`"
+            let sql = "SELECT * FROM \(ORDER_TABLE_NAME) WHERE \(ORDER_TABLE) = '" + _tableName + "' AND \(ORDER_STATE) = 'chuathanhtoan'"
             var result:FMResultSet?
             // Xu ly ngoai le
             do{
@@ -247,6 +247,30 @@ class DatabaseLayer{
                     try database?.executeUpdate(sql, values: [order.getName(), order.getTable()])
                 } catch {
                     print("Error when trying to delete order: \(error.localizedDescription)")
+                }
+            }
+            
+            // Đóng kết nối với cơ sở dữ liệu
+            let _ = close()
+        }
+    }
+    
+    //update hang loat
+    func updateOrderS(_ orders: [Order]) {
+        // Mở kết nối với cơ sở dữ liệu
+        if open() {
+            // Lặp qua mảng các đối tượng Order
+            for order in orders {
+                let sql = "UPDATE \(ORDER_TABLE_NAME) SET \(ORDER_QUANTITY) = ? WHERE \(ORDER_NAME) = ? AND \(ORDER_TABLE) = ?"
+                
+                if(order.getQuantity() > 0){
+                    // Xử lý ngoại lệ
+                    do {
+                        // Thực hiện câu lệnh SQL
+                        try database?.executeUpdate(sql, values: [order.getQuantity(),order.getName(), order.getTable()])
+                    } catch {
+                        print("Error when trying to update order: \(error.localizedDescription)")
+                    }
                 }
             }
             
