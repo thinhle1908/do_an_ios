@@ -18,14 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOT-BC-5nm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOT-BC-5nm" userLabel="Sidebar">
                                 <rect key="frame" x="-240" y="88" width="240" height="808"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJM-fq-QAM">
                                         <rect key="frame" x="8" y="33" width="224" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Quan Li Ban"/>
+                                        <connections>
+                                            <segue destination="9Nl-2c-SoG" kind="show" id="LB8-oT-kFN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,6 +72,7 @@
                                         <size key="customSize" width="194" height="98"/>
                                         <connections>
                                             <outlet property="tenBan" destination="Dkq-Bq-0TA" id="zWL-F3-0Cu"/>
+                                            <segue destination="Q8v-P7-AI7" kind="show" id="HhP-ir-AGQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -344,7 +348,7 @@ ABC</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TqP-J2-CHW">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QLBanTableViewCell" rowHeight="60" id="YR6-ZK-nAt" customClass="QLBanTableViewCell" customModule="doanios" customModuleProvider="target">
@@ -415,7 +419,6 @@ ABC</string>
                     </view>
                     <navigationItem key="navigationItem" title="Danh sach ban" id="sTO-ka-IEE">
                         <barButtonItem key="backBarButtonItem" title=" " id="MMA-hs-2oj"/>
-                        <barButtonItem key="leftBarButtonItem" image="back" id="ndR-Z9-CvS"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="on9-c6-qy6">
                             <connections>
                                 <segue destination="hvK-6J-M1P" kind="show" id="w5w-lC-d7k"/>
@@ -439,7 +442,7 @@ ABC</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="rFJ-4V-kFu">
-                                <rect key="frame" x="30" y="124" width="354" height="153"/>
+                                <rect key="frame" x="30" y="168" width="354" height="153"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhap ten ban" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3h-Oo-bhL">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="55"/>
@@ -570,7 +573,7 @@ ABC</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zu1-oM-pqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4902.898550724638" y="97.767857142857139"/>
+            <point key="canvasLocation" x="683" y="-18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e6T-0O-u0N">
@@ -589,107 +592,6 @@ ABC</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lzs-LF-vZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1961" y="98"/>
-        </scene>
-        <!--Menu Chinh-->
-        <scene sceneID="QAO-PX-qtg">
-            <objects>
-                <viewController id="ort-tS-TfL" customClass="BanViewController" customModule="doanios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GXs-6T-9CM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIR-xN-l24">
-                                <rect key="frame" x="-240" y="88" width="240" height="774"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="uKY-HC-wfU"/>
-                                </constraints>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lL2-Te-xVW">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6oI-PO-xcU">
-                                    <size key="itemSize" width="194" height="98"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="15" minY="10" maxX="15" maxY="20"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="goiBanCell" id="D3d-0a-Ej3" customClass="BanCollectionViewCell" customModule="doanios" customModuleProvider="target">
-                                        <rect key="frame" x="110" y="10" width="194" height="98"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="194" height="98"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ban 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2b-Bg-SUH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="98"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="r2b-Bg-SUH" firstAttribute="leading" secondItem="D3d-0a-Ej3" secondAttribute="leading" id="HNB-eK-CeQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="r2b-Bg-SUH" secondAttribute="trailing" id="UTa-Uh-eaG"/>
-                                            <constraint firstAttribute="bottom" secondItem="r2b-Bg-SUH" secondAttribute="bottom" id="ift-hK-FmB"/>
-                                            <constraint firstItem="r2b-Bg-SUH" firstAttribute="top" secondItem="D3d-0a-Ej3" secondAttribute="top" id="jsC-Jl-M9S"/>
-                                        </constraints>
-                                        <size key="customSize" width="194" height="98"/>
-                                        <connections>
-                                            <outlet property="txtBanMHC" destination="r2b-Bg-SUH" id="1Ns-gy-MrY"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="iIR-xN-l24" firstAttribute="top" secondItem="I1f-Bq-y5d" secondAttribute="top" id="CpA-zQ-YbP"/>
-                            <constraint firstItem="lL2-Te-xVW" firstAttribute="top" secondItem="I1f-Bq-y5d" secondAttribute="top" id="N7k-WG-oPH"/>
-                            <constraint firstItem="I1f-Bq-y5d" firstAttribute="bottom" secondItem="lL2-Te-xVW" secondAttribute="bottom" id="YI1-5S-eLT"/>
-                            <constraint firstItem="iIR-xN-l24" firstAttribute="bottom" secondItem="I1f-Bq-y5d" secondAttribute="bottom" id="YOh-XU-16e"/>
-                            <constraint firstItem="lL2-Te-xVW" firstAttribute="leading" secondItem="I1f-Bq-y5d" secondAttribute="leading" id="gVQ-tL-wSd"/>
-                            <constraint firstItem="I1f-Bq-y5d" firstAttribute="trailing" secondItem="lL2-Te-xVW" secondAttribute="trailing" id="rLw-QK-DhZ"/>
-                            <constraint firstItem="iIR-xN-l24" firstAttribute="leading" secondItem="I1f-Bq-y5d" secondAttribute="leading" constant="-240" id="w1v-TW-SnS"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="I1f-Bq-y5d"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Menu Chinh" id="eC7-aH-d9d">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="Eb4-VI-zF0">
-                            <connections>
-                                <action selector="btnMenu:" destination="ort-tS-TfL" id="8Dv-Ah-A1w"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="collban" destination="lL2-Te-xVW" id="NXT-Te-VOe"/>
-                        <outlet property="leadingConst" destination="w1v-TW-SnS" id="Kgf-zL-GtA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCw-hp-9H7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2422" y="-918"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ER7-y6-ARO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mhs-8I-6eq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="50a-hh-oNe">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ort-tS-TfL" kind="relationship" relationship="rootViewController" id="Vgj-rf-wsX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yAf-K5-q5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1645" y="-918"/>
         </scene>
         <!--Tam Tinh Controller-->
         <scene sceneID="IWk-4x-o4T">
@@ -1135,7 +1037,6 @@ ABC</string>
     </scenes>
     <resources>
         <image name="AnhMau" width="640" height="360"/>
-        <image name="back" width="25" height="25"/>
         <image name="default" width="100" height="100"/>
         <image name="ic_giammon" width="20" height="20"/>
         <image name="ic_tangmon" width="20" height="20"/>
@@ -1145,6 +1046,6 @@ ABC</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EI0-rp-gzV"/>
-        <segue reference="HQt-BK-5Pw"/>
+        <segue reference="IKp-Oz-7IK"/>
     </inferredMetricsTieBreakers>
 </document>

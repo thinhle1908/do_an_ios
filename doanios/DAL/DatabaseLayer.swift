@@ -420,7 +420,7 @@ class DatabaseLayer{
     public func getAllTable(_tables: inout [Table]){
         //thuc hien doc du lieu
         if (open()){
-            let sql = "SELECT * FROM \(TABLE_TABLE_NAME)"
+            let sql = "SELECT * FROM \(TABLE_TABLE_NAME) ORDER BY \(TABLE_NAME) ASC "
             var result:FMResultSet?
             // Xu ly ngoai le
             do{
