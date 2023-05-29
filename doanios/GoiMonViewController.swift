@@ -5,7 +5,7 @@
 //  Created by Minh on 5/23/23.
 //  Copyright © 2023 fit.tdc. All rights reserved.
 //
-
+import os.log
 import UIKit
 
 class GoiMonViewController: UIViewController,
@@ -13,29 +13,39 @@ class GoiMonViewController: UIViewController,
     UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout{
 
+    /*
+     
+     
+     */
     
     
     
     private var orderList = [Order]()
     private var dao:DatabaseLayer?
+    private var dishList = [Dish]()
     
-    var order1:Order? = Order(name: "Com ga 1",table: "2", state: "chuaThanhToan", quantity: 3, price: 1000)
-    var order2:Order? = Order(name: "Com ga 2",table: "2", state: "chuaThanhToan", quantity: 3, price: 1000)
-    
-    
-    //GET DATA
-    let data = ["Com ga 1","Com ga 2","Com ga 3","Com ga 4","Com ga 5","Com ga 6",]
+            var tableName:String? = ""
+    private var tongTien:Int = 0
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
-    }
+        return dishList.count    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "goiMonCell", for: indexPath) as! GoiMonCollectionViewCell
-        cell.tenMonAn.text = data[indexPath.row]
-        cell.imgMonAn.image = #imageLiteral(resourceName: "imgComGa")
-        cell.soLuongMon.text = 
+        cell.tenMonAn.text = dishList[indexPath.item].getName()
+        cell.imgMonAn.image = dishList[indexPath.item].getImage()
+        cell.soLuongMon.text = "0"
+        let tempPrice = dishList[indexPath.item].getPrice()
+        let tempName = dishList[indexPath.item].getName()
+        
+        for donHang in orderList{
+            if(tempName == donHang.getName()){
+                tongTien += tempPrice * donHang.getQuantity()
+                cell.soLuongMon.text = String(donHang.getQuantity())
+                os_log("tim duoc 1 mon an trung khop")
+            }
+        }
         return cell;
     }
     
@@ -50,19 +60,54 @@ class GoiMonViewController: UIViewController,
     
     @IBOutlet weak var coll: UICollectionView!
     
+    @IBAction func btnTangSoLuong(_ sender: UIButton) {
+        if let cell = sender.superview?.superview as? GoiMonCollectionViewCell{
+            if var value = Int(cell.soLuongMon.text ?? "0") {
+                // Tăng giá trị lên 1
+                value += 1
+                
+                // Cập nhật giá trị mới cho UITextField
+                cell.soLuongMon.text = String(value)
+            }
+        }
+    }
     
+    @IBAction func btnGiamSoLuong(_ sender: UIButton) {
+        if let cell = sender.superview?.superview as? GoiMonCollectionViewCell {
+            if var value = Int(cell.soLuongMon.text ?? "0") {
+                // Giảm giá trị đi 1 đơn vị, nhưng không cho phép giảm dưới 0
+          	      value = max(value - 1, 0)
+                
+                // Cập nhật giá trị mới cho UITextField
+                cell.soLuongMon.text = String(value)
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         coll.dataSource = self;
         coll.delegate = self;
         coll.reloadData()
         // Do any additional setup after loading the view.
-        orderList.append(order1!)
-        orderList.append(order2!)
+        dao = DatabaseLayer()
+//        dao?.superDelete(tableNameWantToDelete: "oder")
+//        dao?.superDelete(tableNameWantToDelete: "dish")
+        
+        
+        
+        dao?.getAllDish(dishes: &dishList)
+        //dao?.getOrderByTable(_orders: &orderList, _tableName: tableName!)
+        dao?.getAllOrder(_orders: &orderList)
+        print("Dish count :" ,dishList.count)
+        print("order count :" ,orderList.count)
+        if let tableName = tableName {
+           print("",tableName)
+        }
+       
         
     }
     
-
+    
     /*
     // MARK: - Navigation
 

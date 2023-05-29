@@ -36,6 +36,8 @@
 		BA8004492A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */; };
 		BA80044B2A1CF30200BC27E5 /* GoiMonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80044A2A1CF30200BC27E5 /* GoiMonViewController.swift */; };
 		BAC889372A1E2CF00052A0EE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC889362A1E2CF00052A0EE /* libsqlite3.0.tbd */; };
+		BAFFE2032A24940F003E25D7 /* ThongKeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFE2022A24940E003E25D7 /* ThongKeViewController.swift */; };
+		BAFFE2052A24B466003E25D7 /* do_an_ios in Resources */ = {isa = PBXBuildFile; fileRef = BAFFE2042A24B466003E25D7 /* do_an_ios */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoiMonCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA80044A2A1CF30200BC27E5 /* GoiMonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoiMonViewController.swift; sourceTree = "<group>"; };
 		BAC889362A1E2CF00052A0EE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		BAFFE2022A24940E003E25D7 /* ThongKeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThongKeViewController.swift; sourceTree = "<group>"; };
+		BAFFE2042A24B466003E25D7 /* do_an_ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = do_an_ios; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		662B5ED12A160173005CD76E = {
 			isa = PBXGroup;
 			children = (
+				BAFFE2042A24B466003E25D7 /* do_an_ios */,
 				662B5EDC2A160173005CD76E /* doanios */,
 				662B5EF12A160177005CD76E /* doaniosTests */,
 				662B5EDB2A160173005CD76E /* Products */,
@@ -167,6 +172,7 @@
 		667978042A16EAB50032D40F /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				BAFFE2022A24940E003E25D7 /* ThongKeViewController.swift */,
 				667978072A16EC4F0032D40F /* LoginViewController.swift */,
 				BA8004482A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift */,
 				BA80044A2A1CF30200BC27E5 /* GoiMonViewController.swift */,
@@ -318,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFFE2052A24B466003E25D7 /* do_an_ios in Resources */,
 				662B5EE82A160177005CD76E /* LaunchScreen.storyboard in Resources */,
 				662B5EE52A160177005CD76E /* Assets.xcassets in Resources */,
 				662B5EE32A160173005CD76E /* Main.storyboard in Resources */,
@@ -354,6 +361,7 @@
 				BA80044B2A1CF30200BC27E5 /* GoiMonViewController.swift in Sources */,
 				BA53028F2A1E50120048125D /* Table.swift in Sources */,
 				66638C322A2262E800EFAAB1 /* DishTableViewController.swift in Sources */,
+				BAFFE2032A24940F003E25D7 /* ThongKeViewController.swift in Sources */,
 				BA8004492A1CF22A00BC27E5 /* GoiMonCollectionViewCell.swift in Sources */,
 				74532A2C2A20E9FF00E5AFAE /* QLBanTableViewCell.swift in Sources */,
 				BA5302872A1E3BA80048125D /* FMDatabaseAdditions.m in Sources */,
